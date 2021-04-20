@@ -13,11 +13,7 @@ const randomGenerator = (item, i) => ({
   isHiglight: false,
 });
 
-const Matrix_Basic = ({
-  columnsNumber,
-  matrix,
-  rowsNumber,
-}) => {
+const Matrix_Basic = ({columnsNumber,matrix,rowsNumber}) => {
   useEffect(() => {
     const tmp = Array(columnsNumber * rowsNumber).fill(0).map(randomGenerator);
     store.dispatch(setMatrix(tmp));
